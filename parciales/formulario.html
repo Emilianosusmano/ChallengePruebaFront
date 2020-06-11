@@ -1,0 +1,18 @@
+<h1>Formulario de Ingreso de Cadena de ADN</h1>
+<hr>
+
+<div class="row">
+	<form id="formularioAdn" ng-submit="guardarAdn()" novalidate="novalidate">
+		<div class="form-group">
+			<label class="control-label">Cadena de ADN:</label>
+			<br>
+			<input type="text" class="form-control" ng-model="cadena.dna" required
+				placeholder="Ingrese la cadena de ADN a Verificar">
+		</div>
+		<br>
+		<button type="submit" class="btn btn-primary">Verificar <i class="fa fa-check"></i></button>
+		<br><br>
+		<p class="text-success animated fadeIn" ng-show="insertado">{{mensajeAgregado}}</p>
+		<p class="text-danger animated fadeIn" ng-show="errorAlInsertar">{{mensajeAgregado}}</p>
+	</form>
+</div>

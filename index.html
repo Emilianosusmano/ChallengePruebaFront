@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html ng-app="challengeApp" ng-controller="mainCtrl">
+    <head>
+        <title>Challenge Mutantes</title>
+            <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+            <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+
+        <!-- Estilos -->
+            <!-- Incluir Bootstrap -->
+            <link rel="stylesheet" href="css/bootstrap.min.css">
+            <!-- Animate.css : Animaciones dinamicas-->
+            <link rel="stylesheet" href="css/animate.css">
+            <!-- FontAwesome 4.3.0 : Varia los iconos segun version-->
+            <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+            <!-- Estilo personalizado -->
+            <link rel="stylesheet" href="css/style.css">
+
+        <!-- Librerias AngularJS -->
+            <!-- ng-app -->
+            <script src="js/lib/angular.min.js"></script>
+            <!-- jcs-autoValidate : Autovalidar Formularios-->
+            <script src="js/lib/jcs-auto-validate.min.js"></script>
+            <!-- ngRoute : Navegar Htmls-->
+            <script src="js/lib/angular-route.min.js"></script>
+            <!-- ngTouch : Mejoras para Celular-->
+            <script src="js/lib/angular-touch.min.js"></script>
+            <!-- ui.mask : Mascaras personalizadas-->
+            <script src="js/lib/ui-utils.min.js"></script>
+        
+        <!-- Librerias de terceros -->
+            <!-- Sweet Alert : Alertas prediseñadas-->
+            <script src="plugins/sweetalert/sweetalert.min.js"></script>
+            <link rel="stylesheet" type="text/css" href="plugins/sweetalert/sweetalert.css">
+
+        <!-- Scripts -->
+            <script src="js/app.js"></script>
+            <script src="js/config.js"></script>
+
+        <!-- Controladores de páginas -->
+            <script src="js/inicioCtrl.js"></script>
+            <script src="js/statsCtrl.js"></script>
+            <script src="js/formularioCtrl.js"></script>
+            <script src="js/verDatosCtrl.js"></script>
+    </head>    
+
+    <body>
+        <div ng-include="menuSuperior"></div>
+        
+        <div class="container">
+            <!-- La pagina principal ira aquí -->
+            <div ng-view></div>
+        </div>
+    </body>
+</html>

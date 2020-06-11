@@ -1,0 +1,41 @@
+<h1><i class="fa fa-list-alt"></i> Estadisticas de Challenge Mutantes</h1>
+<hr>
+
+<div class="row">
+	<table class="table table-striped">
+		<tr>
+			<th>Informacion</th>
+			<th>Cantidad</th>
+		</tr>
+		<tr>
+			<td>Cantidad de Mutantes</td>
+			<td>{{ estadistica.contadorDnaMutante }}</td>
+		</tr>
+		<tr>
+			<td>Cantidad de Humanos</td>
+			<td>{{ estadistica.contadorDnaHumano }}</td>
+		</tr>
+		<tr>
+			<td>Ratio</td>
+			<td>{{ estadistica.ratio }}</td>
+		</tr>
+	</table>
+	<br>
+	<button class="btn btn-primary" ng-click="refrescar()">Refrescar Estadisticas</button>
+	<p class="text-danger animated fadeIn" ng-show="errorAlConsultar">Error al consultar datos.</p>
+
+	<hr>
+
+	<form id="formularioMail" name="formulario" ng-submit="enviarMail()" novalidate="novalidate">
+		<div class="form-group">
+			<label for="email" class="control-label">Ingrese Email para recibir la Estadistica.</label>
+			<input type="email" id="email" class="form-control" name="email" ng-model="formData.email"
+				required="required" placeholder="Ingrese su email aqui">
+		</div>
+		<br>
+		<button type="submit" class="btn btn-primary">Enviar mail <i class="fa fa-envelope-o"></i></button>
+		<br><br>
+		<p class="text-success animated fadeIn" ng-show="errorEnMail.exito">{{errorEnMail.mensaje}}</p>
+		<p class="text-danger animated fadeIn" ng-show="errorEnMail.error">{{errorEnMail.mensaje}}</p>
+	</form>
+</div>

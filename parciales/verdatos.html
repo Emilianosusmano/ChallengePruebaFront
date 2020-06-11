@@ -1,0 +1,24 @@
+<h1><i class="fa fa-th-list"></i> Listado de Personas Cargadas</h1>
+<hr>
+
+<div class="row">
+	<table class="table table-striped">
+		<tr>
+			<th>id de Persona</th>
+			<th>Cadena Adn</th>
+			<th>Cantidad de Cadenas</th>
+			<th>¿Es Mutante?</th>
+		</tr>
+
+		<tr ng-repeat="dato in datos.listaTodos | limitTo: posicion | limitTo: -10">
+			<td>{{ dato.idPersona }}</td>
+			<td>{{ dato.dna }}</td>
+			<td>{{ dato.cantCadenas }}</td>
+			<td>{{ dato.isMutant | mostrarBoolean}}</td>
+		</tr>
+	</table>
+	<br>
+	<button class="btn btn-primary" ng-click="anteriores()"><i class="fa fa-chevron-circle-left"></i> Anterior</button>
+	<button class="btn btn-primary" ng-click="siguientes()">Siguiente <i
+			class="fa fa-chevron-circle-right"></i></button>
+</div>
